@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalculadoraService } from '../services';
 
 //Essa anotação abaixo é oq faz ele ser declarado um Component
 @Component({
@@ -17,7 +18,9 @@ import { Component, OnInit } from '@angular/core';
 export class CalculadoraComponent implements OnInit {
 
   //Método invocado quando o objeto é criado
-  constructor() { }
+  constructor(private calculadoraService: CalculadoraService) { 
+    
+  }
 
   //ngOnInit é para caso tenha uma inicialização mais pesada
   //ou que possa impactar na criação do objeto
